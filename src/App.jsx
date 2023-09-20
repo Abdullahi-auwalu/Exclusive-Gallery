@@ -16,13 +16,13 @@ function App() {
   // };
 
   return (
-    <>
+    <div className="bg-gray-50">
       {!isLoggedIn ? (
         <Login/>
       ) : (
         <Home />
       )}
-    </>
+    </div>
   );
 }
 

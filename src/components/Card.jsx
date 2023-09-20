@@ -11,7 +11,7 @@ function Card({ image, onDeleteImage }) {
     const tags = image.tags || [];
   
     return (
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
         <img
           src={image.url}
           alt={`Image ${image.id}`}
@@ -28,21 +28,14 @@ function Card({ image, onDeleteImage }) {
           ))}
         </div>
   
-        <input
-          type="text"
-          value={niceTag}
-          onChange={handleNiceTagChange}
-          className="w-full p-2 border rounded"
-        />
-  
         <button
           onClick={() => onDeleteImage(image.id)}
           className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition duration-300"
         >
           Delete
         </button>
-        <p className="text-sm text-gray-500 text-center mt-2">
-          Added at: {image.numberTag}
+        <p className="text-sm text-gray-500 text-center mt-2 text-base">
+          Tag No: {image.numberTag}
         </p>
       </div>
     );

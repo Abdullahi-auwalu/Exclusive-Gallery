@@ -69,9 +69,9 @@ function Home() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
-      <div className="mb-4">
+    <div className="container mx-auto p-4 bg-gray-50">
+      <h2 className="flex align-middle justify-center text-blue-500 text-4xl font-bold mb-20 font-mono"> Exclusive Gallery</h2>
+      <div className="mb-10 flex align-middle justify-center">
         <input
           type="text"
           placeholder="Search by number tag"
@@ -93,9 +93,11 @@ function Home() {
       >
         <input {...getInputProps()} />
         {loading ? (
+          <div className="flex align-middle justify-center text-blue-600">            
           <span className="loading loading-dots loading-sm"></span>
+          </div>
         ) : (
-          <p className="text-gray-500 text-center">
+          <p className="text-center text-blue-600">
             Drag and drop images here, or click to select files
           </p>
         )}
