@@ -13,11 +13,11 @@ function Card({ image, onDeleteImage }) {
   const tags = Array.isArray(image.tags) ? image.tags : [];
 
   return (
-    <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+    <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden h-96">
       <img
         src={image.url}
         alt={`Image ${image.id}`}
-        className="w-full h-40 object-cover"
+        className="w-full h-72 object-cover"
       />
       <div className="p-3">
         {tags.map((tag) => (
